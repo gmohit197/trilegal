@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="whitneybook.otf">
+            <string>Whitney-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="q6L-ye-vMx">
+            <objects>
+                <viewController id="OCk-Z2-d4q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="deD-mA-bgI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drawer" translatesAutoresizingMaskIntoConstraints="NO" id="MqG-eE-goi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MqG-eE-goi" firstAttribute="top" secondItem="jO7-1x-PcN" secondAttribute="top" id="GqD-SD-a2m"/>
+                            <constraint firstItem="MqG-eE-goi" firstAttribute="leading" secondItem="deD-mA-bgI" secondAttribute="leading" id="dXl-me-VLl"/>
+                            <constraint firstItem="jO7-1x-PcN" firstAttribute="trailing" secondItem="MqG-eE-goi" secondAttribute="trailing" id="eNL-Wv-o6v"/>
+                            <constraint firstItem="jO7-1x-PcN" firstAttribute="bottom" secondItem="MqG-eE-goi" secondAttribute="bottom" id="jEQ-3j-gFL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jO7-1x-PcN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fe7-E4-wS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4366" y="-1084"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="spu-9z-yXP">
+            <objects>
+                <viewController storyboardIdentifier="menuViewController" id="0b6-BN-phK" customClass="menuViewController" customModule="Trilegal_TS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VUL-Mn-Aya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="680"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yne-wm-mgC">
+                                <rect key="frame" x="0.0" y="44" width="266" height="636"/>
+                                <color key="backgroundColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzH-cZ-f4y">
+                                <rect key="frame" x="0.0" y="44" width="266" height="636"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i52-BX-0rA">
+                                        <rect key="frame" x="20" y="120" width="220" height="380"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HNG-No-cvy">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeicon" translatesAutoresizingMaskIntoConstraints="NO" id="uCk-ra-h62">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="Zjc-To-YJF"/>
+                                                            <constraint firstAttribute="height" constant="30" id="vlv-jb-M2e"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jk5-BU-2E3">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LOE-Jl-pTB">
+                                                <rect key="frame" x="0.0" y="35" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetentryicon" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-lt-efI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="pnV-ug-I5l"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timesheet Entry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8b-6O-g8U">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zqy-LQ-FMi">
+                                                <rect key="frame" x="0.0" y="70" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytimesheeticon" translatesAutoresizingMaskIntoConstraints="NO" id="FKz-dM-OZP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="ce6-F0-XJq"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Timesheet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-QL-UGz">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-La-AG1">
+                                                <rect key="frame" x="0.0" y="105" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetreviewicon" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-aP-s03">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="C1h-hA-zZY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Timesheet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I9-Ki-P9T">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SZc-B5-rL4">
+                                                <rect key="frame" x="0.0" y="140" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetediticon" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-ro-zZs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="OR8-Ac-IG7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Timesheet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggz-Df-4hI">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-9L-INb">
+                                                <rect key="frame" x="0.0" y="175" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendericon" translatesAutoresizingMaskIntoConstraints="NO" id="3KR-tc-EwZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="Vrb-Mk-bWa"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Calendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VO-Ii-bvF">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-VD-fdZ">
+                                                <rect key="frame" x="0.0" y="210" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reimbursemententryicon" translatesAutoresizingMaskIntoConstraints="NO" id="vDM-sn-AnQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="KaN-lT-89A"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reimbursement Entry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJy-H1-CZG">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vzv-sK-iIO">
+                                                <rect key="frame" x="0.0" y="245" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytimesheeticon" translatesAutoresizingMaskIntoConstraints="NO" id="iaM-NE-cnb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="fi2-rE-pAe"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Reimbursement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHV-hc-HCV">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqF-Qm-hUd">
+                                                <rect key="frame" x="0.0" y="280" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetreviewicon" translatesAutoresizingMaskIntoConstraints="NO" id="ix8-XQ-MAO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="Eyo-Kb-bO1"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Reimbursement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-ni-aYK">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-0I-MUT">
+                                                <rect key="frame" x="0.0" y="315" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetediticon" translatesAutoresizingMaskIntoConstraints="NO" id="2TQ-y7-aVV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="GdY-yn-bBX"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Reimbursement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kj-Hg-uKC">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-72-EVq">
+                                                <rect key="frame" x="0.0" y="350" width="220" height="30"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logouticon" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-Ac-RpP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="XmI-wT-48d"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVD-wo-PTz">
+                                                        <rect key="frame" x="49" y="0.0" width="171" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="Izv-uh-kn0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-y6-t2C">
+                                        <rect key="frame" x="48" y="10" width="170" height="70"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3FG-Kq-f5b"/>
+                                            <constraint firstAttribute="width" constant="170" id="Qtr-Jj-s4P"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrX-RR-B2E">
+                                        <rect key="frame" x="87" y="560" width="92.5" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="EUB-qo-2gP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GrX-RR-B2E" firstAttribute="centerX" secondItem="XzH-cZ-f4y" secondAttribute="centerX" id="08z-gI-vcN"/>
+                                    <constraint firstAttribute="bottom" secondItem="i52-BX-0rA" secondAttribute="bottom" constant="85" id="0Hd-0i-avb"/>
+                                    <constraint firstItem="i52-BX-0rA" firstAttribute="top" secondItem="XzH-cZ-f4y" secondAttribute="top" constant="120" id="Fsh-9y-mS0"/>
+                                    <constraint firstItem="nFE-y6-t2C" firstAttribute="top" secondItem="XzH-cZ-f4y" secondAttribute="top" constant="10" id="UHC-6t-A6s"/>
+                                    <constraint firstItem="i52-BX-0rA" firstAttribute="leading" secondItem="XzH-cZ-f4y" secondAttribute="leading" constant="20" id="W86-oU-h8o"/>
+                                    <constraint firstItem="GrX-RR-B2E" firstAttribute="top" secondItem="i52-BX-0rA" secondAttribute="bottom" constant="60" id="hEJ-Xp-tro"/>
+                                    <constraint firstAttribute="trailing" secondItem="i52-BX-0rA" secondAttribute="trailing" constant="10" id="nL8-za-KL4"/>
+                                    <constraint firstItem="nFE-y6-t2C" firstAttribute="centerX" secondItem="XzH-cZ-f4y" secondAttribute="centerX" id="ume-5g-Bid"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XzH-cZ-f4y" firstAttribute="leading" secondItem="Yne-wm-mgC" secondAttribute="leading" id="8EN-MY-Zbl"/>
+                            <constraint firstItem="XzH-cZ-f4y" firstAttribute="bottom" secondItem="OYY-Jv-6x1" secondAttribute="bottom" id="FQt-Te-EuE"/>
+                            <constraint firstItem="Yne-wm-mgC" firstAttribute="leading" secondItem="OYY-Jv-6x1" secondAttribute="leading" id="MRw-tr-ZQM"/>
+                            <constraint firstItem="XzH-cZ-f4y" firstAttribute="trailing" secondItem="Yne-wm-mgC" secondAttribute="trailing" id="PJP-4X-pYV"/>
+                            <constraint firstItem="Yne-wm-mgC" firstAttribute="top" secondItem="OYY-Jv-6x1" secondAttribute="top" id="Vji-UB-s1A"/>
+                            <constraint firstItem="OYY-Jv-6x1" firstAttribute="trailing" secondItem="Yne-wm-mgC" secondAttribute="trailing" constant="54" id="WHQ-3F-e4g"/>
+                            <constraint firstItem="XzH-cZ-f4y" firstAttribute="bottom" secondItem="Yne-wm-mgC" secondAttribute="bottom" id="aUe-MI-ULb"/>
+                            <constraint firstItem="XzH-cZ-f4y" firstAttribute="top" secondItem="Yne-wm-mgC" secondAttribute="top" id="rds-0v-Jd6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OYY-Jv-6x1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="szq-Oy-cg4"/>
+                    <size key="freeformSize" width="320" height="680"/>
+                    <connections>
+                        <outlet property="editReimbursementStackView" destination="5Pg-0I-MUT" id="DYf-hq-lwX"/>
+                        <outlet property="editTimesheetStackView" destination="SZc-B5-rL4" id="dhq-KR-o1x"/>
+                        <outlet property="homeStackView" destination="HNG-No-cvy" id="ubC-cI-enI"/>
+                        <outlet property="logoutStackView" destination="Sdb-72-EVq" id="rW0-dG-Spr"/>
+                        <outlet property="myCalendarStackView" destination="gQn-9L-INb" id="sgx-8O-0Ix"/>
+                        <outlet property="myReimbursementStackView" destination="Vzv-sK-iIO" id="2KV-Ag-v0K"/>
+                        <outlet property="myTimesheetStackView" destination="Zqy-LQ-FMi" id="ses-3i-Yb8"/>
+                        <outlet property="reimbursementEntryStackView" destination="LEn-VD-fdZ" id="8YG-rF-iMC"/>
+                        <outlet property="reviewReimbursementStackView" destination="xqF-Qm-hUd" id="u97-qr-JvR"/>
+                        <outlet property="reviewTmesheetStackView" destination="oQK-La-AG1" id="tpq-Mh-xlI"/>
+                        <outlet property="timesheetEntryStackView" destination="LOE-Jl-pTB" id="dD8-vG-Chz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66d-UB-EbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3585.5999999999999" y="-1088.4557721139431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T9T-fe-WHM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b02-CJ-thv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Fw-pH-Dbb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0b6-BN-phK" kind="relationship" relationship="rootViewController" id="vYQ-g1-UOF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oD-aE-2Wp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="-1093"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendericon" width="60" height="49"/>
+        <image name="drawer" width="720" height="1440"/>
+        <image name="homeicon" width="60" height="49"/>
+        <image name="logo" width="182" height="70"/>
+        <image name="logouticon" width="60" height="49"/>
+        <image name="mytimesheeticon" width="60" height="49"/>
+        <image name="reimbursemententryicon" width="57" height="48"/>
+        <image name="timesheetediticon" width="60" height="49"/>
+        <image name="timesheetentryicon" width="60" height="49"/>
+        <image name="timesheetreviewicon" width="60" height="49"/>
+    </resources>
+</document>

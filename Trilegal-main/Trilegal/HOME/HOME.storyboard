@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="whitneybook.otf">
+            <string>Whitney-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="biv-ZC-txO">
+            <objects>
+                <viewController storyboardIdentifier="HOMEVC" id="hib-kY-S52" customClass="HOMEVC" customModule="Trilegal_TS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6v-D1-BrH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PJf-X9-wcq">
+                                <rect key="frame" x="10" y="54" width="354.5" height="605"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" id="0ch-Zw-M38">
+                                        <rect key="frame" x="0.0" y="0.0" width="354.5" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjz-ge-27Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-NY-mM4">
+                                                        <rect key="frame" x="20" y="20" width="135" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetentryicon" translatesAutoresizingMaskIntoConstraints="NO" id="WVv-kB-zB6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Timesheet Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxr-l7-EWp">
+                                                                <rect key="frame" x="0.0" y="49" width="135" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="tyK-NY-mM4" firstAttribute="leading" secondItem="Cjz-ge-27Y" secondAttribute="leading" constant="20" id="3tP-C1-ngQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tyK-NY-mM4" secondAttribute="trailing" constant="20" id="NYJ-ob-Frl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tyK-NY-mM4" secondAttribute="bottom" constant="20" id="NkN-9t-mtR"/>
+                                                    <constraint firstItem="tyK-NY-mM4" firstAttribute="centerY" secondItem="Cjz-ge-27Y" secondAttribute="centerY" id="gbb-nb-wsg"/>
+                                                    <constraint firstItem="tyK-NY-mM4" firstAttribute="top" secondItem="Cjz-ge-27Y" secondAttribute="top" constant="20" id="sXh-UC-tQH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj1-Sh-sdE">
+                                                <rect key="frame" x="180" y="0.0" width="174.5" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kzg-Pv-Pee">
+                                                        <rect key="frame" x="20" y="20" width="134.5" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytimesheeticon" translatesAutoresizingMaskIntoConstraints="NO" id="Dfs-ri-RD5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="MyTimesheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7b-af-b5B">
+                                                                <rect key="frame" x="0.0" y="49" width="134.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.39996236559999998" green="0.40002405639999999" blue="0.39994883539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Kzg-Pv-Pee" firstAttribute="leading" secondItem="Cj1-Sh-sdE" secondAttribute="leading" constant="20" id="8rN-pE-BRa"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Kzg-Pv-Pee" secondAttribute="bottom" constant="20" id="KN5-aJ-bIE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Kzg-Pv-Pee" secondAttribute="trailing" constant="20" id="bIr-n0-yzC"/>
+                                                    <constraint firstItem="Kzg-Pv-Pee" firstAttribute="top" secondItem="Cj1-Sh-sdE" secondAttribute="top" constant="20" id="fbM-h8-FLZ"/>
+                                                    <constraint firstItem="Kzg-Pv-Pee" firstAttribute="centerY" secondItem="Cj1-Sh-sdE" secondAttribute="centerY" id="mou-54-J7A"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="VXb-4g-jLi"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" id="y6I-Ue-mTb">
+                                        <rect key="frame" x="0.0" y="123" width="354.5" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkR-Gg-9gH">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-4d-jGq">
+                                                        <rect key="frame" x="20" y="20" width="135" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetreviewicon" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-Vy-fyP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Review Timesheets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-Bo-MCe">
+                                                                <rect key="frame" x="0.0" y="49" width="135" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Gvr-4d-jGq" firstAttribute="top" secondItem="LkR-Gg-9gH" secondAttribute="top" constant="20" id="0o9-PB-u1x"/>
+                                                    <constraint firstItem="Gvr-4d-jGq" firstAttribute="centerY" secondItem="LkR-Gg-9gH" secondAttribute="centerY" id="DkJ-Qa-sJI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Gvr-4d-jGq" secondAttribute="bottom" constant="20" id="TTG-SG-Q03"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gvr-4d-jGq" secondAttribute="trailing" constant="20" id="hE1-5c-JAM"/>
+                                                    <constraint firstItem="Gvr-4d-jGq" firstAttribute="leading" secondItem="LkR-Gg-9gH" secondAttribute="leading" constant="20" id="lrz-fM-11l"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybh-R0-PXW">
+                                                <rect key="frame" x="180" y="0.0" width="174.5" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-E8-PKp">
+                                                        <rect key="frame" x="20" y="20" width="134.5" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timesheetediticon" translatesAutoresizingMaskIntoConstraints="NO" id="VLG-YV-xwi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Edit Timesheets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP9-hq-Rne">
+                                                                <rect key="frame" x="0.0" y="49" width="134.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.60004031660000001" blue="0.79597705600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="SfU-E8-PKp" secondAttribute="trailing" constant="20" id="EqH-CQ-EKg"/>
+                                                    <constraint firstItem="SfU-E8-PKp" firstAttribute="leading" secondItem="ybh-R0-PXW" secondAttribute="leading" constant="20" id="Rfo-Nh-r18"/>
+                                                    <constraint firstItem="SfU-E8-PKp" firstAttribute="centerY" secondItem="ybh-R0-PXW" secondAttribute="centerY" id="ZIr-g6-dLD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SfU-E8-PKp" secondAttribute="bottom" constant="20" id="qs9-xB-7bG"/>
+                                                    <constraint firstItem="SfU-E8-PKp" firstAttribute="top" secondItem="ybh-R0-PXW" secondAttribute="top" constant="20" id="rkR-c6-TaP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Ig7-qg-sKI"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" id="PDK-ec-uAB">
+                                        <rect key="frame" x="0.0" y="246" width="354.5" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-2m-GVK">
+                                                <rect key="frame" x="0.0" y="0.0" width="354.5" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIW-H5-25e">
+                                                        <rect key="frame" x="20" y="20" width="314.5" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendericon" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-Ef-KlM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="314.5" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-6q-FWI">
+                                                                <rect key="frame" x="0.0" y="49" width="314.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.79609566929999998" green="0.20393493770000001" blue="0.20000773669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="LIW-H5-25e" firstAttribute="centerY" secondItem="kbV-2m-GVK" secondAttribute="centerY" id="Gcp-fe-Enw"/>
+                                                    <constraint firstItem="LIW-H5-25e" firstAttribute="top" secondItem="kbV-2m-GVK" secondAttribute="top" constant="20" id="HDs-MS-DuC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LIW-H5-25e" secondAttribute="bottom" constant="20" id="Tby-VH-1D9"/>
+                                                    <constraint firstItem="LIW-H5-25e" firstAttribute="leading" secondItem="kbV-2m-GVK" secondAttribute="leading" constant="20" id="adQ-pT-Ilg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LIW-H5-25e" secondAttribute="trailing" constant="20" id="v58-cH-TMY"/>
+                                                </constraints>
+                                            </view>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jp2-wV-wfN">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pZN-FY-BW6">
+                                                        <rect key="frame" x="20" y="20" width="0.0" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytimesheeticon" translatesAutoresizingMaskIntoConstraints="NO" id="f5U-AF-k9k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="MyTimesheet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFB-sb-epA">
+                                                                <rect key="frame" x="0.0" y="49" width="0.0" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.39996236559999998" green="0.40002405639999999" blue="0.39994883539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="pZN-FY-BW6" firstAttribute="centerY" secondItem="jp2-wV-wfN" secondAttribute="centerY" id="M9z-Hg-lWk"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pZN-FY-BW6" secondAttribute="bottom" constant="20" id="NH0-5a-BUV"/>
+                                                    <constraint firstItem="pZN-FY-BW6" firstAttribute="top" secondItem="jp2-wV-wfN" secondAttribute="top" constant="20" id="Qy3-MC-Axn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pZN-FY-BW6" secondAttribute="trailing" constant="20" id="VvV-Ij-Bof"/>
+                                                    <constraint firstItem="pZN-FY-BW6" firstAttribute="leading" secondItem="jp2-wV-wfN" secondAttribute="leading" constant="20" id="cI7-hH-EHh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="tJo-Ys-MJd"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" id="4T9-2o-SM3">
+                                        <rect key="frame" x="0.0" y="369" width="354.5" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhx-aE-gds">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yEI-8N-D8x">
+                                                        <rect key="frame" x="20" y="20" width="135" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reimbursemententryicon" translatesAutoresizingMaskIntoConstraints="NO" id="b4l-l3-yo5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="48"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Reimbursment Entry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3u-Zd-7j8">
+                                                                <rect key="frame" x="0.0" y="48" width="135" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="yEI-8N-D8x" firstAttribute="centerY" secondItem="rhx-aE-gds" secondAttribute="centerY" id="XfJ-xU-gsc"/>
+                                                    <constraint firstItem="yEI-8N-D8x" firstAttribute="top" secondItem="rhx-aE-gds" secondAttribute="top" constant="20" id="nub-Xu-VhA"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yEI-8N-D8x" secondAttribute="bottom" constant="20" id="rWa-sx-Uyo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yEI-8N-D8x" secondAttribute="trailing" constant="20" id="wFP-wS-U59"/>
+                                                    <constraint firstItem="yEI-8N-D8x" firstAttribute="leading" secondItem="rhx-aE-gds" secondAttribute="leading" constant="20" id="zg1-8Z-H6e"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-yW-YY5">
+                                                <rect key="frame" x="180" y="0.0" width="174.5" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gE6-HT-8e9">
+                                                        <rect key="frame" x="20" y="20" width="134.5" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytimesheeticon" translatesAutoresizingMaskIntoConstraints="NO" id="q5H-Ra-8qV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Reimbursement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-Sk-k7h">
+                                                                <rect key="frame" x="0.0" y="49" width="134.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.39996236559999998" green="0.40002405639999999" blue="0.39994883539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="gE6-HT-8e9" secondAttribute="bottom" constant="20" id="2Yt-zK-QVh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gE6-HT-8e9" secondAttribute="trailing" constant="20" id="7ZD-Ar-Q4l"/>
+                                                    <constraint firstItem="gE6-HT-8e9" firstAttribute="top" secondItem="1uo-yW-YY5" secondAttribute="top" constant="20" id="RTK-Yt-HAX"/>
+                                                    <constraint firstItem="gE6-HT-8e9" firstAttribute="centerY" secondItem="1uo-yW-YY5" secondAttribute="centerY" id="aRb-GH-T32"/>
+                                                    <constraint firstItem="gE6-HT-8e9" firstAttribute="leading" secondItem="1uo-yW-YY5" secondAttribute="leading" constant="20" id="vNk-dQ-SoV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="7s7-mB-jhG"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nkx-9n-4ja">
+                                        <rect key="frame" x="0.0" y="492" width="354.5" height="113"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D93-nf-Ppr">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gch-Mv-hMj">
+                                                        <rect key="frame" x="20" y="20" width="135" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reimbursementreviewicon" translatesAutoresizingMaskIntoConstraints="NO" id="UYu-88-oHZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Review Reimbursement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLV-ir-96v">
+                                                                <rect key="frame" x="0.0" y="49" width="135" height="24"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Gch-Mv-hMj" firstAttribute="top" secondItem="D93-nf-Ppr" secondAttribute="top" constant="20" id="SPQ-NJ-sAh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Gch-Mv-hMj" secondAttribute="bottom" constant="20" id="SjU-eY-9rQ"/>
+                                                    <constraint firstItem="Gch-Mv-hMj" firstAttribute="centerY" secondItem="D93-nf-Ppr" secondAttribute="centerY" id="fBT-kZ-Vsr"/>
+                                                    <constraint firstItem="Gch-Mv-hMj" firstAttribute="leading" secondItem="D93-nf-Ppr" secondAttribute="leading" constant="20" id="foh-k7-IDY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gch-Mv-hMj" secondAttribute="trailing" constant="20" id="w2F-tJ-nqg"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-Y2-eVG">
+                                                <rect key="frame" x="180" y="0.0" width="174.5" height="113"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-Wr-7oM">
+                                                        <rect key="frame" x="20" y="20" width="134.5" height="73"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rrimbursementediticon" translatesAutoresizingMaskIntoConstraints="NO" id="gKn-pO-KXl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="134.5" height="49"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Edit Reimbursement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-6R-tg0">
+                                                                <rect key="frame" x="0.0" y="49" width="134.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.60004031660000001" blue="0.79597705600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="2IS-Wr-7oM" firstAttribute="centerY" secondItem="K0K-Y2-eVG" secondAttribute="centerY" id="3PG-m1-pgp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2IS-Wr-7oM" secondAttribute="bottom" constant="20" id="G7k-qy-sVY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2IS-Wr-7oM" secondAttribute="trailing" constant="20" id="NyS-fR-7dX"/>
+                                                    <constraint firstItem="2IS-Wr-7oM" firstAttribute="top" secondItem="K0K-Y2-eVG" secondAttribute="top" constant="20" id="SPx-le-kJE"/>
+                                                    <constraint firstItem="2IS-Wr-7oM" firstAttribute="leading" secondItem="K0K-Y2-eVG" secondAttribute="leading" constant="20" id="cVn-tB-toR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9kU-SC-qzq" firstAttribute="trailing" secondItem="PJf-X9-wcq" secondAttribute="trailing" constant="10" id="2I2-id-yq6"/>
+                            <constraint firstItem="PJf-X9-wcq" firstAttribute="centerX" secondItem="K6v-D1-BrH" secondAttribute="centerX" id="7Z8-0T-f3f"/>
+                            <constraint firstItem="PJf-X9-wcq" firstAttribute="leading" secondItem="9kU-SC-qzq" secondAttribute="leading" constant="10" id="LeJ-se-71G"/>
+                            <constraint firstItem="PJf-X9-wcq" firstAttribute="top" secondItem="9kU-SC-qzq" secondAttribute="top" constant="10" id="QCn-s1-R3c"/>
+                            <constraint firstAttribute="bottom" secondItem="PJf-X9-wcq" secondAttribute="bottom" constant="10" id="X27-2H-6WG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9kU-SC-qzq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="asr-P8-rlf">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="mPn-ux-8Fu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="sideMenuBtn:" destination="hib-kY-S52" id="TdQ-xz-m61"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="Mrs-E9-bQx">
+                            <color key="tintColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editReimbursement" destination="K0K-Y2-eVG" id="R12-UD-62w"/>
+                        <outlet property="editTimeSheet" destination="ybh-R0-PXW" id="hxp-NB-GNw"/>
+                        <outlet property="myCalendar" destination="kbV-2m-GVK" id="aBl-2N-Pbc"/>
+                        <outlet property="myReimbursement" destination="1uo-yW-YY5" id="ozr-XE-Xah"/>
+                        <outlet property="myTimeSheet" destination="Cj1-Sh-sdE" id="3RD-Zt-OZu"/>
+                        <outlet property="reimbursementEntry" destination="rhx-aE-gds" id="3mR-T8-0bV"/>
+                        <outlet property="reviewReimbursement" destination="D93-nf-Ppr" id="vN6-vh-OdY"/>
+                        <outlet property="reviewTimeSheet" destination="LkR-Gg-9gH" id="gHD-QE-VNu"/>
+                        <outlet property="timesheetEntry" destination="Cjz-ge-27Y" id="C4E-Ab-f9H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prC-3A-s3w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-258"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Uf-vX-QH4">
+            <objects>
+                <viewController id="DM6-tv-JnY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRM-36-ADD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="7Ww-Gl-iWy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7Ww-Gl-iWy" secondAttribute="bottom" id="2oV-wM-RUN"/>
+                            <constraint firstItem="7Ww-Gl-iWy" firstAttribute="leading" secondItem="Wp2-Uz-dSe" secondAttribute="leading" id="NRr-zm-aVq"/>
+                            <constraint firstItem="7Ww-Gl-iWy" firstAttribute="top" secondItem="DRM-36-ADD" secondAttribute="top" id="b1K-6b-6IY"/>
+                            <constraint firstItem="Wp2-Uz-dSe" firstAttribute="trailing" secondItem="7Ww-Gl-iWy" secondAttribute="trailing" id="vJI-hE-bjp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wp2-Uz-dSe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wb-fk-XRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="-258"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="l2V-fv-T6K">
+            <objects>
+                <navigationController storyboardIdentifier="HOMENC" automaticallyAdjustsScrollViewInsets="NO" id="BU8-zt-rm0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XZU-kW-Hgp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="npD-Fa-ahz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.20394244789999999" blue="0.39994627240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hib-kY-S52" kind="relationship" relationship="rootViewController" id="ak9-qt-Ujc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fF-8k-fNR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-258"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendericon" width="60" height="49"/>
+        <image name="dashboard" width="720" height="1440"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="mytimesheeticon" width="60" height="49"/>
+        <image name="reimbursemententryicon" width="57" height="48"/>
+        <image name="reimbursementreviewicon" width="60" height="49"/>
+        <image name="rrimbursementediticon" width="60" height="49"/>
+        <image name="timesheetediticon" width="60" height="49"/>
+        <image name="timesheetentryicon" width="60" height="49"/>
+        <image name="timesheetreviewicon" width="60" height="49"/>
+    </resources>
+</document>

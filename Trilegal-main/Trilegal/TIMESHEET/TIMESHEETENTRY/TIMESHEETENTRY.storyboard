@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="whitneybook.otf">
+            <string>Whitney-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Timesheet Entry-->
+        <scene sceneID="AEY-vP-pfL">
+            <objects>
+                <viewController storyboardIdentifier="TIMESHEETENTRYVC" automaticallyAdjustsScrollViewInsets="NO" id="FrO-WL-l5z" customClass="TIMESHEETENTRYVC" customModule="Trilegal_TS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OxO-od-bgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gat-QE-pgi">
+                                <rect key="frame" x="50" y="83.5" width="300" height="500"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vNg-FE-4xz">
+                                        <rect key="frame" x="10" y="10" width="280" height="480"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCA-QM-3GE">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="PfM-Ep-CfT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="detailsBackBtn:" destination="FrO-WL-l5z" eventType="touchUpInside" id="C0S-0f-Nvv"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9vm-wD-kSr">
+                                                <rect key="frame" x="0.0" y="22" width="280" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD8-er-s6g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Client" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iaw-nY-utY" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="280" height="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ZKt-PE-2F8"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VDD-6X-xTM">
+                                                <rect key="frame" x="0.0" y="74" width="280" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Matter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwY-Y7-hQD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Matter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-BE-N5v" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="280" height="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="c8Q-Q8-kvn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-3d-q54">
+                                                <rect key="frame" x="0.0" y="126" width="280" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aG-QT-9Wk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgG-Hf-7Uc">
+                                                        <rect key="frame" x="0.0" y="25" width="280" height="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XhO-Uw-VM9"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r3u-ms-2HB">
+                                                <rect key="frame" x="0.0" y="178" width="280" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-Z4-5k8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-95-9Mu">
+                                                        <rect key="frame" x="0.0" y="25" width="280" height="25"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Pi1-Qr-0Ka"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ngN-gc-yYW">
+                                                <rect key="frame" x="0.0" y="230" width="280" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qbz-gH-Ze9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLZ-lH-IjQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="11"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-Rf-V28" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
+                                                                <rect key="frame" x="75" y="0.0" width="60" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="eyT-eu-Q4f"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOffColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOnColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="smallDotColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="mySize">
+                                                                        <size key="value" width="66" height="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="myColor">
+                                                                        <color key="value" red="0.11757319419999999" green="0.25884425639999997" blue="0.39210423830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="corners0to1">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="dotTime">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="fLZ-lH-IjQ" secondAttribute="bottom" id="0Jz-3t-2xR"/>
+                                                            <constraint firstItem="fLZ-lH-IjQ" firstAttribute="top" secondItem="Qbz-gH-Ze9" secondAttribute="top" id="0g2-t3-Fau"/>
+                                                            <constraint firstItem="VvR-Rf-V28" firstAttribute="top" secondItem="Qbz-gH-Ze9" secondAttribute="top" id="703-EQ-FRM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="VvR-Rf-V28" secondAttribute="bottom" id="hqR-QT-Akh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="VvR-Rf-V28" secondAttribute="trailing" id="sKK-Ii-uvI"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-OJ-0MB">
+                                                        <rect key="frame" x="145" y="0.0" width="135" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off Consel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UO-la-0VC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="11"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRN-PN-MGn" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
+                                                                <rect key="frame" x="70" y="0.0" width="60" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="fO1-G8-HFN"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOffColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOnColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="smallDotColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="mySize">
+                                                                        <size key="value" width="66" height="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="myColor">
+                                                                        <color key="value" red="0.11757319419999999" green="0.25884425639999997" blue="0.39210423830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="corners0to1">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="dotTime">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz7-nO-3kL">
+                                                                <rect key="frame" x="135" y="0.0" width="0.0" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" id="aw4-Ov-ytB"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="DRN-PN-MGn" secondAttribute="bottom" id="4fW-fz-ugM"/>
+                                                            <constraint firstItem="5UO-la-0VC" firstAttribute="top" secondItem="iJZ-OJ-0MB" secondAttribute="top" id="G7x-3y-CQc"/>
+                                                            <constraint firstItem="Qz7-nO-3kL" firstAttribute="leading" secondItem="DRN-PN-MGn" secondAttribute="trailing" constant="5" id="HXP-2b-ljg"/>
+                                                            <constraint firstItem="DRN-PN-MGn" firstAttribute="top" secondItem="iJZ-OJ-0MB" secondAttribute="top" id="LUX-WZ-RCM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="5UO-la-0VC" secondAttribute="bottom" id="fs9-pI-M5Q"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="rLQ-13-m9s"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Te-1V-Bl3">
+                                                <rect key="frame" x="0.0" y="262" width="280" height="186"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-r9-E7p">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="ugJ-4d-kkq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Narration" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lpA-ny-PPa">
+                                                        <rect key="frame" x="0.0" y="22" width="280" height="164"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="FrO-WL-l5z" id="yYv-uW-6TE"/>
+                                                        </connections>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axS-G9-66d">
+                                                <rect key="frame" x="0.0" y="450" width="280" height="30"/>
+                                                <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="s9k-BP-DMm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="SAVE CHANGES">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="detailsSaveBtn:" destination="FrO-WL-l5z" eventType="touchUpInside" id="sVC-MR-qY5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FmJ-PR-9bw"/>
+                                    <constraint firstAttribute="height" constant="500" id="G9H-Oj-Qdl"/>
+                                    <constraint firstAttribute="trailing" secondItem="vNg-FE-4xz" secondAttribute="trailing" constant="10" id="LYa-xf-gS0"/>
+                                    <constraint firstAttribute="bottom" secondItem="vNg-FE-4xz" secondAttribute="bottom" constant="10" id="eJt-hz-cXy"/>
+                                    <constraint firstItem="vNg-FE-4xz" firstAttribute="top" secondItem="gat-QE-pgi" secondAttribute="top" constant="10" id="fgO-Qn-HBA"/>
+                                    <constraint firstItem="vNg-FE-4xz" firstAttribute="leading" secondItem="gat-QE-pgi" secondAttribute="leading" constant="10" id="y83-jS-Zsg"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-99-VeW">
+                                <rect key="frame" x="50" y="144" width="300" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2u0-Ml-7tG">
+                                        <rect key="frame" x="10" y="10" width="280" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D63-jI-Dr1">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="AKD-ZX-8zt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Narration" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="59E-jX-1Hs">
+                                                <rect key="frame" x="0.0" y="43" width="280" height="94"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="FrO-WL-l5z" id="AJr-HN-AGX"/>
+                                                </connections>
+                                            </textView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-gV-iiL">
+                                                <rect key="frame" x="0.0" y="140" width="280" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fd-KU-gjx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <state key="normal" title="CANCEL">
+                                                            <color key="titleColor" red="0.133251071" green="0.29021891950000001" blue="0.43915745620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancelBtnClick:" destination="FrO-WL-l5z" eventType="touchUpInside" id="yuj-0p-tGk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2A-Tq-2io">
+                                                        <rect key="frame" x="150" y="0.0" width="130" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                        <state key="normal" title="OK">
+                                                            <color key="titleColor" red="0.133251071" green="0.29021891950000001" blue="0.43915745620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="okBtnClick:" destination="FrO-WL-l5z" eventType="touchUpInside" id="V04-hT-8QW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="KLY-kH-3Od"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2u0-Ml-7tG" firstAttribute="top" secondItem="tQo-99-VeW" secondAttribute="top" constant="10" id="77T-eH-R7e"/>
+                                    <constraint firstAttribute="bottom" secondItem="2u0-Ml-7tG" secondAttribute="bottom" constant="10" id="JBF-Xo-IaV"/>
+                                    <constraint firstAttribute="width" constant="300" id="JD1-ZQ-aUg"/>
+                                    <constraint firstAttribute="trailing" secondItem="2u0-Ml-7tG" secondAttribute="trailing" constant="10" id="L6I-ls-wEN"/>
+                                    <constraint firstAttribute="height" constant="200" id="TCl-VA-53v"/>
+                                    <constraint firstItem="2u0-Ml-7tG" firstAttribute="leading" secondItem="tQo-99-VeW" secondAttribute="leading" constant="10" id="kzn-Tr-tgz"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-sm-XWR">
+                                <rect key="frame" x="20" y="54" width="360" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fmy-HY-YBf">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="395.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Client" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-N1-FNH" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="34"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checkMarkEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Matter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-U2-eDX" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="47" width="360" height="34"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="checkMarkEnabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aqA-fs-brG">
+                                                <rect key="frame" x="0.0" y="94" width="360" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-WL-dIf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpP-wr-rZ7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MMM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-PU-8F3">
+                                                                <rect key="frame" x="0.0" y="25" width="175" height="25"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RIc-Ti-QEk">
+                                                        <rect key="frame" x="185" y="0.0" width="175" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFE-Dn-Cmh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-5P-vNQ">
+                                                                <rect key="frame" x="0.0" y="25" width="175" height="25"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Hvh-21-Cia"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wKL-uf-6fN">
+                                                <rect key="frame" x="0.0" y="157.5" width="360" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="auW-wz-Lmm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPm-H8-dgg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-84-4e5" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
+                                                                <rect key="frame" x="115" y="0.0" width="60" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="2p1-iQ-qyj"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOffColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOnColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="smallDotColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="mySize">
+                                                                        <size key="value" width="66" height="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="myColor">
+                                                                        <color key="value" red="0.11757319419999999" green="0.25884425639999997" blue="0.39210423830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="corners0to1">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="dotTime">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="g4R-84-4e5" secondAttribute="bottom" id="94D-m3-7sG"/>
+                                                            <constraint firstItem="lPm-H8-dgg" firstAttribute="top" secondItem="auW-wz-Lmm" secondAttribute="top" id="ZXF-GR-8mn"/>
+                                                            <constraint firstItem="g4R-84-4e5" firstAttribute="top" secondItem="auW-wz-Lmm" secondAttribute="top" id="bIG-yY-JcM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lPm-H8-dgg" secondAttribute="bottom" id="eNg-Sm-GxQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="g4R-84-4e5" secondAttribute="trailing" id="jXJ-Wo-6VO"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nP0-Tq-rVm">
+                                                        <rect key="frame" x="185" y="0.0" width="175" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off Consel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3j-Zf-Y2D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McK-bA-Gwq" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
+                                                                <rect key="frame" x="110" y="0.0" width="60" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="xmV-SF-HS8"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOffColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="dotOnColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="smallDotColor">
+                                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="mySize">
+                                                                        <size key="value" width="66" height="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="myColor">
+                                                                        <color key="value" red="0.11757319419999999" green="0.25884425639999997" blue="0.39210423830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="corners0to1">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="dotTime">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqo-N8-ohK">
+                                                                <rect key="frame" x="175" y="0.0" width="0.0" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" id="JWw-fU-TBo"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="G3j-Zf-Y2D" firstAttribute="top" secondItem="nP0-Tq-rVm" secondAttribute="top" id="VRV-0I-qQt"/>
+                                                            <constraint firstAttribute="bottom" secondItem="G3j-Zf-Y2D" secondAttribute="bottom" id="aqW-Rg-sJq"/>
+                                                            <constraint firstItem="McK-bA-Gwq" firstAttribute="top" secondItem="nP0-Tq-rVm" secondAttribute="top" id="cGM-0N-wUL"/>
+                                                            <constraint firstItem="Zqo-N8-ohK" firstAttribute="leading" secondItem="McK-bA-Gwq" secondAttribute="trailing" constant="5" id="iec-VJ-jb2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="McK-bA-Gwq" secondAttribute="bottom" id="vl2-3K-NyZ"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="oQ7-Ug-n3Q"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="87k-Ev-1QD">
+                                                <rect key="frame" x="0.0" y="200.5" width="360" height="195"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fCf-rn-GqX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAt-lb-v8h">
+                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="23"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQd-qc-ea7">
+                                                                <rect key="frame" x="0.0" y="25" width="360" height="75"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-vl-Foq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="75"/>
+                                                                        <subviews>
+                                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please Add Narration" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-Um-gPQ">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="326" height="75"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="75" id="sT1-42-wbH"/>
+                                                                                </constraints>
+                                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="FrO-WL-l5z" id="oau-Nm-9Z6"/>
+                                                                                </connections>
+                                                                            </textView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ob-ZOH">
+                                                                                <rect key="frame" x="328" y="0.0" width="32" height="75"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-kY-xFd">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="32" id="2Xu-DP-a5U"/>
+                                                                                            <constraint firstAttribute="height" constant="32" id="uDx-nN-AAR"/>
+                                                                                        </constraints>
+                                                                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                                                                        <inset key="titleEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                                                                        <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                                                                        <state key="normal" image="expand"/>
+                                                                                        <connections>
+                                                                                            <action selector="expandImageBtn:" destination="FrO-WL-l5z" eventType="touchUpInside" id="kmN-sV-foD"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dOK-1B-6F1">
+                                                                                        <rect key="frame" x="0.0" y="34" width="32" height="41"/>
+                                                                                    </imageView>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="dOK-1B-6F1" firstAttribute="top" secondItem="XiU-kY-xFd" secondAttribute="bottom" constant="2" id="26l-mv-rim"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="1Zg-vl-Foq" secondAttribute="bottom" id="3Ez-sU-Weq"/>
+                                                                    <constraint firstItem="1Zg-vl-Foq" firstAttribute="top" secondItem="RQd-qc-ea7" secondAttribute="top" id="HSA-8b-Yen"/>
+                                                                    <constraint firstItem="1Zg-vl-Foq" firstAttribute="leading" secondItem="RQd-qc-ea7" secondAttribute="leading" id="S0i-o6-lxb"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="1Zg-vl-Foq" secondAttribute="trailing" id="s4O-oC-SdA"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="XJz-I6-EAR"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="KZJ-9o-ycM">
+                                                        <rect key="frame" x="0.0" y="105" width="360" height="30"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-Vg-dDL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CCG-8h-OoC">
+                                                                        <rect key="frame" x="50" y="0.0" width="260" height="30"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-Cx-FAm">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                                                <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                <state key="normal" title="ADD">
+                                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="AddBtn:" destination="FrO-WL-l5z" eventType="touchUpInside" id="ecK-aI-CtL"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-P6-ckU">
+                                                                                <rect key="frame" x="140" y="0.0" width="120" height="30"/>
+                                                                                <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="9"/>
+                                                                                <state key="normal" title="RESET">
+                                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="resetBtnClick:" destination="FrO-WL-l5z" eventType="touchUpInside" id="LEc-Ju-nVy"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="0IZ-dI-Fv7"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="CCG-8h-OoC" secondAttribute="trailing" constant="50" id="Azu-Bc-3cy"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="CCG-8h-OoC" secondAttribute="bottom" id="atF-pd-Eef"/>
+                                                                    <constraint firstItem="CCG-8h-OoC" firstAttribute="top" secondItem="G9V-Vg-dDL" secondAttribute="top" id="dco-gr-WO6"/>
+                                                                    <constraint firstItem="CCG-8h-OoC" firstAttribute="leading" secondItem="G9V-Vg-dDL" secondAttribute="leading" constant="50" id="qGQ-fb-FG5"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="G9V-Vg-dDL" secondAttribute="bottom" id="7zx-hr-DvC"/>
+                                                            <constraint firstAttribute="height" constant="30" id="G4G-YP-n2e"/>
+                                                            <constraint firstAttribute="trailing" secondItem="G9V-Vg-dDL" secondAttribute="trailing" id="kLW-Qn-oZa"/>
+                                                            <constraint firstItem="G9V-Vg-dDL" firstAttribute="top" secondItem="KZJ-9o-ycM" secondAttribute="top" id="s2q-OY-LWn"/>
+                                                            <constraint firstItem="G9V-Vg-dDL" firstAttribute="leading" secondItem="KZJ-9o-ycM" secondAttribute="leading" id="spO-bt-nP7"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-Rw-PRW">
+                                                        <rect key="frame" x="0.0" y="140" width="360" height="35"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-BW-634">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5S-ob-zh1">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.60788303610000005" blue="0.78029257060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upK-0b-zhe">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.0" green="0.60788303610000005" blue="0.78029257060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a9U-rB-Hkw">
+                                                                <rect key="frame" x="72.5" y="0.0" width="70.5" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-XR-jbh">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.069728977979999995" green="0.64708930249999996" blue="0.03524217382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-8I-zzS">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.069728977979999995" green="0.64708930249999996" blue="0.03524217382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-vt-eXP">
+                                                                <rect key="frame" x="145" y="0.0" width="70" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rejected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fh-8M-VKV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.79217392210000004" green="0.20393511650000001" blue="0.2078480124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-Wc-JvU">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.79217392210000004" green="0.20393511650000001" blue="0.2078480124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mx4-8K-Nbc">
+                                                                <rect key="frame" x="217" y="0.0" width="70.5" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submitted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5w-SA-cMa">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.26658719780000001" green="0.41570788619999999" blue="0.2195753157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C26-tF-McX">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.26658719780000001" green="0.41570788619999999" blue="0.2195753157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-N9-Jg2">
+                                                                <rect key="frame" x="289.5" y="0.0" width="70.5" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Submitted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-0K-nDG">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.99216872450000004" green="0.40394216779999997" blue="0.18435090779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qK-oH-thu">
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
+                                                                        <color key="backgroundColor" red="0.99216872450000004" green="0.40394216779999997" blue="0.18435090779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="cUt-mD-rrt"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-62-44o">
+                                                        <rect key="frame" x="0.0" y="180" width="360" height="15"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5m-24-b0d">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="15"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="yA0-Gk-Mvv"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <connections>
+                                                                    <action selector="selectAllBtn:" destination="FrO-WL-l5z" eventType="touchUpInside" id="oam-qT-DNK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq0-wU-2Tc">
+                                                                <rect key="frame" x="30" y="0.0" width="330" height="15"/>
+                                                                <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="YMj-bs-xei"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UEP-aB-8mt">
+                                        <rect key="frame" x="0.0" y="405.5" width="360" height="197.5"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8aY-UP-pmM">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="157.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSheeetEntryCell" id="F96-o5-M1g" customClass="TimeSheeetEntryCell" customModule="Trilegal_TS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24.5" width="360" height="130.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F96-o5-M1g" id="n5D-8W-MTg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="360" height="130.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAP-G7-iOn" customClass="CardView" customModule="Trilegal_TS" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="130.5"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rAs-GO-157">
+                                                                            <rect key="frame" x="0.0" y="2" width="356" height="126.5"/>
+                                                                            <subviews>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-fg-fdO">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="30" id="RJA-l9-B4E"/>
+                                                                                    </constraints>
+                                                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <connections>
+                                                                                        <action selector="closeFriendsAction:" destination="F96-o5-M1g" eventType="touchUpInside" id="UTi-9S-SPd"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tyw-gF-nmt">
+                                                                                    <rect key="frame" x="32" y="0.0" width="282" height="126.5"/>
+                                                                                    <subviews>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-qF-zzu">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="42"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VrS-fb-4tw">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="42"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwQ-WY-0z7">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXT-sY-nms">
+                                                                                                            <rect key="frame" x="0.0" y="21" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Os-kf-hbu">
+                                                                                                    <rect key="frame" x="141" y="0.0" width="141" height="42"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcY-eP-Hvo">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA5-Oc-AlU">
+                                                                                                            <rect key="frame" x="0.0" y="21" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-Wb-nlY">
+                                                                                            <rect key="frame" x="0.0" y="42" width="282" height="42.5"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-p1-tfu">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="42.5"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-wW-faC">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21.5"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-Km-2rW">
+                                                                                                            <rect key="frame" x="0.0" y="21.5" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YLN-3S-amD">
+                                                                                                    <rect key="frame" x="141" y="0.0" width="141" height="42.5"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwT-rz-aai">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21.5"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL3-um-PUW">
+                                                                                                            <rect key="frame" x="0.0" y="21.5" width="141" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XVZ-rI-sQf">
+                                                                                            <rect key="frame" x="0.0" y="84.5" width="282" height="42"/>
+                                                                                            <subviews>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-c2-ifm">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="42"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-sk-b2w">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Narration text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-Vk-7hR">
+                                                                                                            <rect key="frame" x="0.0" y="21" width="282" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-Nb-Izd">
+                                                                                                    <rect key="frame" x="282" y="0.0" width="0.0" height="42"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yys-Gq-AIJ">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-bF-gdY">
+                                                                                                            <rect key="frame" x="0.0" y="21" width="0.0" height="21"/>
+                                                                                                            <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
+                                                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
+                                                                                            </subviews>
+                                                                                        </stackView>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="z29-Cb-b8P">
+                                                                                    <rect key="frame" x="316" y="0.0" width="40" height="22"/>
+                                                                                    <subviews>
+                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO7-hr-Wgr">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
+                                                                                            <state key="normal" image="square.and.pencil" catalog="system"/>
+                                                                                            <connections>
+                                                                                                <action selector="editBtnAction:" destination="F96-o5-M1g" eventType="touchUpInside" id="yvD-oT-1pn"/>
+                                                                                            </connections>
+                                                                                        </button>
+                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X32-De-Q2j">
+                                                                                            <rect key="frame" x="21" y="0.0" width="19" height="22"/>
+                                                                                            <state key="normal" image="trash.fill" catalog="system"/>
+                                                                                            <connections>
+                                                                                                <action selector="deleteBtnAction:" destination="F96-o5-M1g" eventType="touchUpInside" id="rn4-4n-TRD"/>
+                                                                                            </connections>
+                                                                                        </button>
+                                                                                    </subviews>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="40" id="VKe-Lx-LX2"/>
+                                                                                    </constraints>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="rAs-GO-157" secondAttribute="bottom" constant="2" id="5r5-CQ-WbA"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="rAs-GO-157" secondAttribute="trailing" constant="4" id="8Xo-8Z-oa0"/>
+                                                                        <constraint firstItem="rAs-GO-157" firstAttribute="leading" secondItem="aAP-G7-iOn" secondAttribute="leading" id="hV8-fc-3Qf"/>
+                                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="pBJ-aU-6k1"/>
+                                                                        <constraint firstItem="rAs-GO-157" firstAttribute="top" secondItem="aAP-G7-iOn" secondAttribute="top" constant="2" id="sm7-08-vJM"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                            <real key="value" value="1"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="3"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="aAP-G7-iOn" secondAttribute="bottom" id="JOM-gq-GWF"/>
+                                                                <constraint firstItem="aAP-G7-iOn" firstAttribute="leading" secondItem="n5D-8W-MTg" secondAttribute="leading" id="bJ7-Df-WIm"/>
+                                                                <constraint firstAttribute="trailing" secondItem="aAP-G7-iOn" secondAttribute="trailing" id="mUn-0O-qcj"/>
+                                                                <constraint firstItem="aAP-G7-iOn" firstAttribute="top" secondItem="n5D-8W-MTg" secondAttribute="top" id="tzx-39-CRU"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="btnClick" destination="6vh-fg-fdO" id="eeY-dJ-8oH"/>
+                                                            <outlet property="clientName" destination="BXT-sY-nms" id="iqD-Uh-skL"/>
+                                                            <outlet property="date" destination="OPn-Km-2rW" id="Dhp-Nh-hEO"/>
+                                                            <outlet property="deleteBtnClick" destination="X32-De-Q2j" id="kyd-OL-DBC"/>
+                                                            <outlet property="editBtnClick" destination="VO7-hr-Wgr" id="Yt5-C2-Nae"/>
+                                                            <outlet property="matterName" destination="TA5-Oc-AlU" id="5GC-lO-JAJ"/>
+                                                            <outlet property="narration" destination="KTA-Vk-7hR" id="iX8-jp-hFx"/>
+                                                            <outlet property="time" destination="hL3-um-PUW" id="He1-8a-AWX"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="FrO-WL-l5z" id="UsH-4i-O2L"/>
+                                                    <outlet property="delegate" destination="FrO-WL-l5z" id="Qp8-xf-e1y"/>
+                                                </connections>
+                                            </tableView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-zd-F3Z">
+                                                <rect key="frame" x="0.0" y="167.5" width="360" height="30"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yy-LT-LIB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="828-A5-Ebu">
+                                                                <rect key="frame" x="50" y="0.0" width="260" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-uw-YrE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                                        <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <state key="normal" title="SAVE">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="save:" destination="FrO-WL-l5z" eventType="touchUpInside" id="Mnb-uz-p8p"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkI-G2-9ld">
+                                                                        <rect key="frame" x="140" y="0.0" width="120" height="30"/>
+                                                                        <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
+                                                                        <state key="normal" title="SUBMIT">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="submit:" destination="FrO-WL-l5z" eventType="touchUpInside" id="VuI-Yw-6ib"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="828-A5-Ebu" firstAttribute="top" secondItem="5yy-LT-LIB" secondAttribute="top" id="1vT-g3-RC1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="828-A5-Ebu" secondAttribute="bottom" id="VOV-oP-6aQ"/>
+                                                            <constraint firstItem="828-A5-Ebu" firstAttribute="leading" secondItem="5yy-LT-LIB" secondAttribute="leading" constant="50" id="gjD-Xe-u5a"/>
+                                                            <constraint firstAttribute="height" constant="30" id="lql-Ez-WIM"/>
+                                                            <constraint firstAttribute="trailing" secondItem="828-A5-Ebu" secondAttribute="trailing" constant="50" id="meT-7s-70H"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="5yy-LT-LIB" secondAttribute="bottom" id="7Eb-dm-XSx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5yy-LT-LIB" secondAttribute="trailing" id="KKT-X2-sOj"/>
+                                                    <constraint firstItem="5yy-LT-LIB" firstAttribute="leading" secondItem="QXv-zd-F3Z" secondAttribute="leading" id="Tcn-1W-bmt"/>
+                                                    <constraint firstAttribute="height" constant="30" id="nID-ru-oxk"/>
+                                                    <constraint firstItem="5yy-LT-LIB" firstAttribute="top" secondItem="QXv-zd-F3Z" secondAttribute="top" id="qwa-J6-yUd"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8aY-UP-pmM" firstAttribute="top" secondItem="UEP-aB-8mt" secondAttribute="top" id="5na-py-gKZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="8aY-UP-pmM" secondAttribute="trailing" id="TXY-yW-Gxq"/>
+                                            <constraint firstItem="8aY-UP-pmM" firstAttribute="leading" secondItem="UEP-aB-8mt" secondAttribute="leading" id="ZDj-8F-ejx"/>
+                                            <constraint firstAttribute="trailing" secondItem="8aY-UP-pmM" secondAttribute="trailing" id="hbK-xt-8dX"/>
+                                            <constraint firstItem="8aY-UP-pmM" firstAttribute="top" secondItem="UEP-aB-8mt" secondAttribute="top" id="rBQ-0l-Evy"/>
+                                            <constraint firstItem="8aY-UP-pmM" firstAttribute="leading" secondItem="UEP-aB-8mt" secondAttribute="leading" id="v0r-q2-NdY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fmy-HY-YBf" firstAttribute="height" secondItem="UEP-aB-8mt" secondAttribute="height" multiplier="2" id="3En-TE-c4t"/>
+                                    <constraint firstAttribute="trailing" secondItem="fmy-HY-YBf" secondAttribute="trailing" id="972-ba-ahG"/>
+                                    <constraint firstItem="fmy-HY-YBf" firstAttribute="leading" secondItem="yCP-sm-XWR" secondAttribute="leading" id="BUL-6e-fkT"/>
+                                    <constraint firstItem="fmy-HY-YBf" firstAttribute="top" secondItem="yCP-sm-XWR" secondAttribute="top" id="W4q-77-8NA"/>
+                                    <constraint firstAttribute="trailing" secondItem="UEP-aB-8mt" secondAttribute="trailing" id="fMS-qU-sMs"/>
+                                    <constraint firstItem="UEP-aB-8mt" firstAttribute="leading" secondItem="yCP-sm-XWR" secondAttribute="leading" id="rWy-77-aLc"/>
+                                    <constraint firstAttribute="bottom" secondItem="UEP-aB-8mt" secondAttribute="bottom" id="x1R-UU-tyx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z4N-mc-pOU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z4N-mc-pOU" firstAttribute="trailing" secondItem="tQo-99-VeW" secondAttribute="trailing" constant="50" id="386-Az-FXD"/>
+                            <constraint firstItem="gat-QE-pgi" firstAttribute="centerY" secondItem="OxO-od-bgb" secondAttribute="centerY" id="3FP-q8-SfZ"/>
+                            <constraint firstItem="yCP-sm-XWR" firstAttribute="leading" secondItem="z4N-mc-pOU" secondAttribute="leading" constant="20" id="KY8-Xi-6g2"/>
+                            <constraint firstItem="z4N-mc-pOU" firstAttribute="trailing" secondItem="yCP-sm-XWR" secondAttribute="trailing" constant="20" id="T0y-P1-5j7"/>
+                            <constraint firstItem="tQo-99-VeW" firstAttribute="top" secondItem="z4N-mc-pOU" secondAttribute="top" constant="100" id="gHv-3Q-PLI"/>
+                            <constraint firstItem="yCP-sm-XWR" firstAttribute="top" secondItem="z4N-mc-pOU" secondAttribute="top" constant="10" id="ggc-Og-Z0L"/>
+                            <constraint firstItem="gat-QE-pgi" firstAttribute="centerX" secondItem="OxO-od-bgb" secondAttribute="centerX" id="kqO-Ii-gWn"/>
+                            <constraint firstItem="tQo-99-VeW" firstAttribute="leading" secondItem="z4N-mc-pOU" secondAttribute="leading" constant="50" id="tpu-ym-IlL"/>
+                            <constraint firstItem="z4N-mc-pOU" firstAttribute="bottom" secondItem="yCP-sm-XWR" secondAttribute="bottom" constant="10" id="zLx-te-FvF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timesheet Entry" id="UB4-N7-ud3">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="4zP-2n-5lh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="sideMenuBtn:" destination="FrO-WL-l5z" id="1om-l6-gXb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="K5u-YT-8ca">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="approved" destination="1Yd-8I-zzS" id="Dmq-kd-JiB"/>
+                        <outlet property="billableswitchbtn" destination="g4R-84-4e5" id="ZgG-Ku-5gK"/>
+                        <outlet property="billmainview" destination="auW-wz-Lmm" id="cSU-KS-9zM"/>
+                        <outlet property="billopoup" destination="VvR-Rf-V28" id="w1Q-TY-cBt"/>
+                        <outlet property="billpopupview" destination="Qbz-gH-Ze9" id="NcK-Cq-yN9"/>
+                        <outlet property="clientDropDown" destination="rxe-N1-FNH" id="QNZ-HK-ocb"/>
+                        <outlet property="clientPopupDropDown" destination="Iaw-nY-utY" id="nAr-7d-GaE"/>
+                        <outlet property="datePopuptxtField" destination="fgG-Hf-7Uc" id="ehc-7I-83y"/>
+                        <outlet property="dateTxtField" destination="tFa-PU-8F3" id="yJr-ab-n3l"/>
+                        <outlet property="detailsSaveBtn" destination="axS-G9-66d" id="sTY-ls-BRN"/>
+                        <outlet property="detailsView" destination="gat-QE-pgi" id="6aH-mb-n84"/>
+                        <outlet property="matterDropDown" destination="8qN-U2-eDX" id="lET-iz-Wnl"/>
+                        <outlet property="matterPopupDropDown" destination="DjD-BE-N5v" id="5gY-Sr-CNC"/>
+                        <outlet property="narrationDetailsTxtView" destination="lpA-ny-PPa" id="qun-Rs-n3d"/>
+                        <outlet property="narrationPopupTxtView" destination="59E-jX-1Hs" id="6HH-e6-N5j"/>
+                        <outlet property="narrationTextandImageView" destination="RQd-qc-ea7" id="XZF-NK-Len"/>
+                        <outlet property="narrationTxtView" destination="xgI-Um-gPQ" id="def-yC-OZK"/>
+                        <outlet property="narrationView" destination="tQo-99-VeW" id="mFg-Q5-s6J"/>
+                        <outlet property="nsubmitted" destination="4qK-oH-thu" id="Bz2-3S-fg3"/>
+                        <outlet property="offConselswitchbtn" destination="McK-bA-Gwq" id="Rcv-Qk-SRA"/>
+                        <outlet property="offcpopup" destination="DRN-PN-MGn" id="Zqo-rf-0f3"/>
+                        <outlet property="rejected" destination="OxU-Wc-JvU" id="0zz-2S-riZ"/>
+                        <outlet property="rightSideBtn" destination="K5u-YT-8ca" id="aOu-1y-vEY"/>
+                        <outlet property="rootview" destination="OxO-od-bgb" id="BXy-hw-Z2V"/>
+                        <outlet property="selectAllBtnOutlet" destination="u5m-24-b0d" id="0da-Ra-tj4"/>
+                        <outlet property="submitted" destination="C26-tF-McX" id="Zhy-NL-5VG"/>
+                        <outlet property="timePopupTxtField" destination="DTE-95-9Mu" id="tnQ-2s-p2l"/>
+                        <outlet property="timeSheetTable" destination="8aY-UP-pmM" id="OsR-0L-k6J"/>
+                        <outlet property="timeTxtField" destination="RhF-5P-vNQ" id="mcx-wb-KrM"/>
+                        <outlet property="tothrs" destination="upK-0b-zhe" id="CyQ-Nk-Ctn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8K-Hl-ec5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="-922"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RMC-QE-aj9">
+            <objects>
+                <viewController id="j4I-fs-sL0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZzF-Oc-opu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trielgalss" translatesAutoresizingMaskIntoConstraints="NO" id="Z39-M0-VdK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SYK-NC-OHG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z39-M0-VdK" firstAttribute="leading" secondItem="SYK-NC-OHG" secondAttribute="leading" id="QN5-Wi-wkA"/>
+                            <constraint firstItem="Z39-M0-VdK" firstAttribute="top" secondItem="SYK-NC-OHG" secondAttribute="top" id="cba-PV-Gti"/>
+                            <constraint firstItem="SYK-NC-OHG" firstAttribute="bottom" secondItem="Z39-M0-VdK" secondAttribute="bottom" id="oxX-Zt-LH1"/>
+                            <constraint firstItem="SYK-NC-OHG" firstAttribute="trailing" secondItem="Z39-M0-VdK" secondAttribute="trailing" id="ujI-hw-1eJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LD0-de-rpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="-920"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vov-ab-FBM">
+            <objects>
+                <navigationController storyboardIdentifier="TIMESHEETENTRYNC" automaticallyAdjustsScrollViewInsets="NO" id="zhD-ME-vSK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vk-vK-KdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.003803481348" green="0.20786419510000001" blue="0.40386739370000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FrO-WL-l5z" kind="relationship" relationship="rootViewController" id="VxT-ES-44h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyq-sc-QCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="-654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="expand" width="512" height="512"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <image name="trielgalss" width="576" height="1280"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,859 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C36BEDFC20C09BD081C6A53 /* Pods_Trilegal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BA3BB72BB225A01D411B7B /* Pods_Trilegal.framework */; };
+		D80E62D12642B1F8001BFA60 /* REVIEWTIMESHEET.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80E62D02642B1F8001BFA60 /* REVIEWTIMESHEET.storyboard */; };
+		D80E62D32642C009001BFA60 /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E62D22642C009001BFA60 /* iOSDropDown.swift */; };
+		D80E62D52642C566001BFA60 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E62D42642C566001BFA60 /* CardView.swift */; };
+		D80E62DA2642D9DE001BFA60 /* CALENDAR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80E62D92642D9DE001BFA60 /* CALENDAR.storyboard */; };
+		D80E62DD2642DBB1001BFA60 /* EDITTIMESHEET.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80E62DC2642DBB1001BFA60 /* EDITTIMESHEET.storyboard */; };
+		D80E62DF2642DBD3001BFA60 /* EDITTIMESHEETVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E62DE2642DBD3001BFA60 /* EDITTIMESHEETVC.swift */; };
+		D84E6D6926A02488009F3A0F /* FileAttachmentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E6D6826A02488009F3A0F /* FileAttachmentAdapter.swift */; };
+		D84E6D6B26A029E9009F3A0F /* ReimbursementFileAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E6D6A26A029E9009F3A0F /* ReimbursementFileAttachmentCell.swift */; };
+		D84E6D6D26A0983B009F3A0F /* EditReimbursementFileAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E6D6C26A0983B009F3A0F /* EditReimbursementFileAttachmentCell.swift */; };
+		D84E6D6F26A0B3FD009F3A0F /* EditFileAttachmentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84E6D6E26A0B3FD009F3A0F /* EditFileAttachmentAdapter.swift */; };
+		D85DE1F22636940100C766AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE1F12636940100C766AD /* AppDelegate.swift */; };
+		D85DE1F42636940100C766AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE1F32636940100C766AD /* SceneDelegate.swift */; };
+		D85DE1F92636940100C766AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85DE1F72636940100C766AD /* Main.storyboard */; };
+		D85DE1FB2636941500C766AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85DE1FA2636941500C766AD /* Assets.xcassets */; };
+		D85DE1FE2636941500C766AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85DE1FC2636941500C766AD /* LaunchScreen.storyboard */; };
+		D85DE2232636BD5E00C766AD /* LOGIN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85DE2222636BD5E00C766AD /* LOGIN.storyboard */; };
+		D85DE2252636BD7D00C766AD /* SPLASHVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE2242636BD7D00C766AD /* SPLASHVC.swift */; };
+		D85DE2272636BD9300C766AD /* LOGINVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE2262636BD9300C766AD /* LOGINVC.swift */; };
+		D866EB28267656C900E651E7 /* DBConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D866EB27267656C900E651E7 /* DBConnection.swift */; };
+		D86CA34926733F1E0099B4E2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86CA34826733F1D0099B4E2 /* Reachability.swift */; };
+		D86E821A2661689000A62F24 /* EditTimesheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E82192661689000A62F24 /* EditTimesheetCell.swift */; };
+		D86E821C266168B100A62F24 /* EditTimesheetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E821B266168B100A62F24 /* EditTimesheetAdapter.swift */; };
+		D86E821E266168CD00A62F24 /* EditReimbursementAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E821D266168CD00A62F24 /* EditReimbursementAdapter.swift */; };
+		D86E8220266168E100A62F24 /* EditReimbursementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E821F266168E100A62F24 /* EditReimbursementCell.swift */; };
+		D870CA2D265D60850084A4EC /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870CA2C265D60850084A4EC /* DIYCalendarCell.swift */; };
+		D87693E526AFE9AF00497CB1 /* BridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D87693E426AFE9AF00497CB1 /* BridgingHeader.m */; };
+		D87693E726B0093700497CB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87693E626B0093700497CB1 /* GoogleService-Info.plist */; };
+		D8771DD4265E769100DC0B81 /* ReviewReimbursementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD3265E769100DC0B81 /* ReviewReimbursementCell.swift */; };
+		D8771DD6265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD5265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift */; };
+		D8771DD8265EB54200DC0B81 /* MyTimeSheetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD7265EB54200DC0B81 /* MyTimeSheetAdapter.swift */; };
+		D8771DDA265EB55900DC0B81 /* MyTimesheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD9265EB55900DC0B81 /* MyTimesheetCell.swift */; };
+		D8771DDF265EB70700DC0B81 /* ReviewTimesheetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DDE265EB70700DC0B81 /* ReviewTimesheetAdapter.swift */; };
+		D8771DE1265EB71B00DC0B81 /* ReviewTimesheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DE0265EB71B00DC0B81 /* ReviewTimesheetCell.swift */; };
+		D8771DE3265EC9D900DC0B81 /* MyReimbursementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DE2265EC9D900DC0B81 /* MyReimbursementCell.swift */; };
+		D8771DE5265EC9F400DC0B81 /* MyReimbursementAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DE4265EC9F400DC0B81 /* MyReimbursementAdapter.swift */; };
+		D87FF16A2660106300989168 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FF1692660106300989168 /* menuViewController.swift */; };
+		D87FF16E2660147500989168 /* whitneybook.otf in Resources */ = {isa = PBXBuildFile; fileRef = D87FF16D2660147500989168 /* whitneybook.otf */; };
+		D8811BC1264A98C400955693 /* TIMESHEETENTRY.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8811BC0264A98C400955693 /* TIMESHEETENTRY.storyboard */; };
+		D8811BC3264A994900955693 /* TIMESHEETENTRYVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8811BC2264A994900955693 /* TIMESHEETENTRYVC.swift */; };
+		D8811BC5264A996000955693 /* REIMBURSEMENTENTRYVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8811BC4264A996000955693 /* REIMBURSEMENTENTRYVC.swift */; };
+		D8811BC7264A997600955693 /* REIMBURSEMENTENTRY.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8811BC6264A997600955693 /* REIMBURSEMENTENTRY.storyboard */; };
+		D881F6C226578223001F9B27 /* CALENDARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D881F6C126578223001F9B27 /* CALENDARVC.swift */; };
+		D8936EA9264906D3009B6758 /* EDITREIMBURSEMENT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8936EA8264906D3009B6758 /* EDITREIMBURSEMENT.storyboard */; };
+		D8936EAB264906E9009B6758 /* EDITREIMBURSEMENTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8936EAA264906E9009B6758 /* EDITREIMBURSEMENTVC.swift */; };
+		D8936EAD2649071D009B6758 /* MYREIMBURSEMENT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8936EAC2649071D009B6758 /* MYREIMBURSEMENT.storyboard */; };
+		D8936EAF26490730009B6758 /* MYREIMBURSEMENTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8936EAE26490730009B6758 /* MYREIMBURSEMENTVC.swift */; };
+		D895E1A026562C39006512F6 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D895E19F26562C39006512F6 /* IQKeyboardManagerSwift */; };
+		D899B192265C008800AA26F4 /* TimeSheetEntryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D899B191265C008800AA26F4 /* TimeSheetEntryAdapter.swift */; };
+		D899B194265C01CD00AA26F4 /* TimeSheeetEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D899B193265C01CD00AA26F4 /* TimeSheeetEntryCell.swift */; };
+		D89A953726382B370005A6E6 /* EXECUTEAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A953626382B370005A6E6 /* EXECUTEAPI.swift */; };
+		D89A953926382B490005A6E6 /* BASEACTIVITY.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A953826382B490005A6E6 /* BASEACTIVITY.swift */; };
+		D89A953B26382BDF0005A6E6 /* HOMEVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A953A26382BDF0005A6E6 /* HOMEVC.swift */; };
+		D89A953D26382C2E0005A6E6 /* HOME.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89A953C26382C2E0005A6E6 /* HOME.storyboard */; };
+		D8A24CD9265CBF5200BD52A2 /* ReimbursementEntryAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A24CD8265CBF5200BD52A2 /* ReimbursementEntryAdapter.swift */; };
+		D8A24CDB265CC03B00BD52A2 /* ReimbursementEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A24CDA265CC03B00BD52A2 /* ReimbursementEntryCell.swift */; };
+		D8A53CF32662405300570AAA /* SwiftySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A53CF22662405300570AAA /* SwiftySwitch.swift */; };
+		D8A5872A269F508100ABAAB7 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A58729269F508100ABAAB7 /* DocumentPicker.swift */; };
+		D8BAC96D266A3828001DFC95 /* CONSTANT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BAC96C266A3828001DFC95 /* CONSTANT.swift */; };
+		D8BEF71726A161DE007B7436 /* ReimbursementEditFileAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEF71626A161DE007B7436 /* ReimbursementEditFileAttachmentCell.swift */; };
+		D8BEF71926A16225007B7436 /* EditReimbursementFileAttachmentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BEF71826A16225007B7436 /* EditReimbursementFileAttachmentAdapter.swift */; };
+		D8D0704C2668B6DA009A572E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D8D0704B2668B6DA009A572E /* Alamofire */; };
+		D8E706F926538CFE00B40F66 /* REVIEWTIMESHEETVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E706F826538CFE00B40F66 /* REVIEWTIMESHEETVC.swift */; };
+		D8EB770C263D8C5200E60C59 /* SIDEMENU.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EB770B263D8C5200E60C59 /* SIDEMENU.storyboard */; };
+		D8F4E2CB2645138D00A517D0 /* MYTIMESHEET.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4E2CA2645138D00A517D0 /* MYTIMESHEET.storyboard */; };
+		D8F4E2CD264513B100A517D0 /* MYTIMESHEETVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4E2CC264513B100A517D0 /* MYTIMESHEETVC.swift */; };
+		D8F4E2D12645351D00A517D0 /* REVIEWREIMBURSEMENT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F4E2D02645351D00A517D0 /* REVIEWREIMBURSEMENT.storyboard */; };
+		D8F4E2D32645353300A517D0 /* REVIEWREIMBURSEMENTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F4E2D22645353300A517D0 /* REVIEWREIMBURSEMENTVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39BA3BB72BB225A01D411B7B /* Pods_Trilegal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trilegal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80E62D02642B1F8001BFA60 /* REVIEWTIMESHEET.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = REVIEWTIMESHEET.storyboard; sourceTree = "<group>"; };
+		D80E62D22642C009001BFA60 /* iOSDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDropDown.swift; sourceTree = "<group>"; };
+		D80E62D42642C566001BFA60 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D80E62D92642D9DE001BFA60 /* CALENDAR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CALENDAR.storyboard; sourceTree = "<group>"; };
+		D80E62DC2642DBB1001BFA60 /* EDITTIMESHEET.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EDITTIMESHEET.storyboard; sourceTree = "<group>"; };
+		D80E62DE2642DBD3001BFA60 /* EDITTIMESHEETVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDITTIMESHEETVC.swift; sourceTree = "<group>"; };
+		D84E6D6826A02488009F3A0F /* FileAttachmentAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAttachmentAdapter.swift; sourceTree = "<group>"; };
+		D84E6D6A26A029E9009F3A0F /* ReimbursementFileAttachmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReimbursementFileAttachmentCell.swift; sourceTree = "<group>"; };
+		D84E6D6C26A0983B009F3A0F /* EditReimbursementFileAttachmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementFileAttachmentCell.swift; sourceTree = "<group>"; };
+		D84E6D6E26A0B3FD009F3A0F /* EditFileAttachmentAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFileAttachmentAdapter.swift; sourceTree = "<group>"; };
+		D85DE1EE2636940100C766AD /* Trilegal TS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trilegal TS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85DE1F12636940100C766AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D85DE1F32636940100C766AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D85DE1F82636940100C766AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D85DE1FA2636941500C766AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D85DE1FD2636941500C766AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D85DE1FF2636941500C766AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85DE2222636BD5E00C766AD /* LOGIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LOGIN.storyboard; sourceTree = "<group>"; };
+		D85DE2242636BD7D00C766AD /* SPLASHVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLASHVC.swift; sourceTree = "<group>"; };
+		D85DE2262636BD9300C766AD /* LOGINVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOGINVC.swift; sourceTree = "<group>"; };
+		D866EB27267656C900E651E7 /* DBConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConnection.swift; sourceTree = "<group>"; };
+		D86CA34826733F1D0099B4E2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D86E82192661689000A62F24 /* EditTimesheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimesheetCell.swift; sourceTree = "<group>"; };
+		D86E821B266168B100A62F24 /* EditTimesheetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimesheetAdapter.swift; sourceTree = "<group>"; };
+		D86E821D266168CD00A62F24 /* EditReimbursementAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementAdapter.swift; sourceTree = "<group>"; };
+		D86E821F266168E100A62F24 /* EditReimbursementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementCell.swift; sourceTree = "<group>"; };
+		D870CA2C265D60850084A4EC /* DIYCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		D87693E326AFE9AF00497CB1 /* Trilegal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trilegal-Bridging-Header.h"; sourceTree = "<group>"; };
+		D87693E426AFE9AF00497CB1 /* BridgingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgingHeader.m; sourceTree = "<group>"; };
+		D87693E626B0093700497CB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8771DD3265E769100DC0B81 /* ReviewReimbursementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReimbursementCell.swift; sourceTree = "<group>"; };
+		D8771DD5265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReimbursementAdapter.swift; sourceTree = "<group>"; };
+		D8771DD7265EB54200DC0B81 /* MyTimeSheetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimeSheetAdapter.swift; sourceTree = "<group>"; };
+		D8771DD9265EB55900DC0B81 /* MyTimesheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimesheetCell.swift; sourceTree = "<group>"; };
+		D8771DDE265EB70700DC0B81 /* ReviewTimesheetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTimesheetAdapter.swift; sourceTree = "<group>"; };
+		D8771DE0265EB71B00DC0B81 /* ReviewTimesheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTimesheetCell.swift; sourceTree = "<group>"; };
+		D8771DE2265EC9D900DC0B81 /* MyReimbursementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReimbursementCell.swift; sourceTree = "<group>"; };
+		D8771DE4265EC9F400DC0B81 /* MyReimbursementAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReimbursementAdapter.swift; sourceTree = "<group>"; };
+		D87FF1692660106300989168 /* menuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		D87FF16D2660147500989168 /* whitneybook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whitneybook.otf; sourceTree = "<group>"; };
+		D8811BC0264A98C400955693 /* TIMESHEETENTRY.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TIMESHEETENTRY.storyboard; sourceTree = "<group>"; };
+		D8811BC2264A994900955693 /* TIMESHEETENTRYVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMESHEETENTRYVC.swift; sourceTree = "<group>"; };
+		D8811BC4264A996000955693 /* REIMBURSEMENTENTRYVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REIMBURSEMENTENTRYVC.swift; sourceTree = "<group>"; };
+		D8811BC6264A997600955693 /* REIMBURSEMENTENTRY.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = REIMBURSEMENTENTRY.storyboard; sourceTree = "<group>"; };
+		D881F6C126578223001F9B27 /* CALENDARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALENDARVC.swift; sourceTree = "<group>"; };
+		D8936EA8264906D3009B6758 /* EDITREIMBURSEMENT.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EDITREIMBURSEMENT.storyboard; sourceTree = "<group>"; };
+		D8936EAA264906E9009B6758 /* EDITREIMBURSEMENTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDITREIMBURSEMENTVC.swift; sourceTree = "<group>"; };
+		D8936EAC2649071D009B6758 /* MYREIMBURSEMENT.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MYREIMBURSEMENT.storyboard; sourceTree = "<group>"; };
+		D8936EAE26490730009B6758 /* MYREIMBURSEMENTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYREIMBURSEMENTVC.swift; sourceTree = "<group>"; };
+		D899B191265C008800AA26F4 /* TimeSheetEntryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetEntryAdapter.swift; sourceTree = "<group>"; };
+		D899B193265C01CD00AA26F4 /* TimeSheeetEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheeetEntryCell.swift; sourceTree = "<group>"; };
+		D89A953626382B370005A6E6 /* EXECUTEAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXECUTEAPI.swift; sourceTree = "<group>"; };
+		D89A953826382B490005A6E6 /* BASEACTIVITY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASEACTIVITY.swift; sourceTree = "<group>"; };
+		D89A953A26382BDF0005A6E6 /* HOMEVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HOMEVC.swift; sourceTree = "<group>"; };
+		D89A953C26382C2E0005A6E6 /* HOME.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HOME.storyboard; sourceTree = "<group>"; };
+		D8A24CD8265CBF5200BD52A2 /* ReimbursementEntryAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReimbursementEntryAdapter.swift; sourceTree = "<group>"; };
+		D8A24CDA265CC03B00BD52A2 /* ReimbursementEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReimbursementEntryCell.swift; sourceTree = "<group>"; };
+		D8A53CF22662405300570AAA /* SwiftySwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySwitch.swift; sourceTree = "<group>"; };
+		D8A58729269F508100ABAAB7 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		D8BAC96C266A3828001DFC95 /* CONSTANT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANT.swift; sourceTree = "<group>"; };
+		D8BEF71626A161DE007B7436 /* ReimbursementEditFileAttachmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReimbursementEditFileAttachmentCell.swift; sourceTree = "<group>"; };
+		D8BEF71826A16225007B7436 /* EditReimbursementFileAttachmentAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementFileAttachmentAdapter.swift; sourceTree = "<group>"; };
+		D8E706F826538CFE00B40F66 /* REVIEWTIMESHEETVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REVIEWTIMESHEETVC.swift; sourceTree = "<group>"; };
+		D8EB770B263D8C5200E60C59 /* SIDEMENU.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SIDEMENU.storyboard; sourceTree = "<group>"; };
+		D8F4E2CA2645138D00A517D0 /* MYTIMESHEET.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MYTIMESHEET.storyboard; sourceTree = "<group>"; };
+		D8F4E2CC264513B100A517D0 /* MYTIMESHEETVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYTIMESHEETVC.swift; sourceTree = "<group>"; };
+		D8F4E2D02645351D00A517D0 /* REVIEWREIMBURSEMENT.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = REVIEWREIMBURSEMENT.storyboard; sourceTree = "<group>"; };
+		D8F4E2D22645353300A517D0 /* REVIEWREIMBURSEMENTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REVIEWREIMBURSEMENTVC.swift; sourceTree = "<group>"; };
+		E47F97AEC58B3BBFD09F8682 /* Pods-Trilegal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trilegal.debug.xcconfig"; path = "Target Support Files/Pods-Trilegal/Pods-Trilegal.debug.xcconfig"; sourceTree = "<group>"; };
+		F8C292E7C4889C6A85CF0F0E /* Pods-Trilegal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trilegal.release.xcconfig"; path = "Target Support Files/Pods-Trilegal/Pods-Trilegal.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D85DE1EB2636940100C766AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D0704C2668B6DA009A572E /* Alamofire in Frameworks */,
+				D895E1A026562C39006512F6 /* IQKeyboardManagerSwift in Frameworks */,
+				4C36BEDFC20C09BD081C6A53 /* Pods_Trilegal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46905B024CE8B92E5009BDFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39BA3BB72BB225A01D411B7B /* Pods_Trilegal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FC9C54A51B97336071E12BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E47F97AEC58B3BBFD09F8682 /* Pods-Trilegal.debug.xcconfig */,
+				F8C292E7C4889C6A85CF0F0E /* Pods-Trilegal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D80E62CF2642AEAF001BFA60 /* REVIEWTIMESHEET */ = {
+			isa = PBXGroup;
+			children = (
+				D80E62D02642B1F8001BFA60 /* REVIEWTIMESHEET.storyboard */,
+				D8E706F826538CFE00B40F66 /* REVIEWTIMESHEETVC.swift */,
+				D8771DDE265EB70700DC0B81 /* ReviewTimesheetAdapter.swift */,
+				D8771DE0265EB71B00DC0B81 /* ReviewTimesheetCell.swift */,
+			);
+			path = REVIEWTIMESHEET;
+			sourceTree = "<group>";
+		};
+		D80E62D82642D9A7001BFA60 /* CALENDAR */ = {
+			isa = PBXGroup;
+			children = (
+				D80E62D92642D9DE001BFA60 /* CALENDAR.storyboard */,
+				D881F6C126578223001F9B27 /* CALENDARVC.swift */,
+				D870CA2C265D60850084A4EC /* DIYCalendarCell.swift */,
+			);
+			path = CALENDAR;
+			sourceTree = "<group>";
+		};
+		D80E62DB2642DB88001BFA60 /* EDITTIMESHEET */ = {
+			isa = PBXGroup;
+			children = (
+				D80E62DC2642DBB1001BFA60 /* EDITTIMESHEET.storyboard */,
+				D80E62DE2642DBD3001BFA60 /* EDITTIMESHEETVC.swift */,
+				D86E82192661689000A62F24 /* EditTimesheetCell.swift */,
+				D86E821B266168B100A62F24 /* EditTimesheetAdapter.swift */,
+			);
+			path = EDITTIMESHEET;
+			sourceTree = "<group>";
+		};
+		D85DE1E52636940100C766AD = {
+			isa = PBXGroup;
+			children = (
+				D85DE1F02636940100C766AD /* Trilegal */,
+				D85DE1EF2636940100C766AD /* Products */,
+				9FC9C54A51B97336071E12BD /* Pods */,
+				46905B024CE8B92E5009BDFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D85DE1EF2636940100C766AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D85DE1EE2636940100C766AD /* Trilegal TS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D85DE1F02636940100C766AD /* Trilegal */ = {
+			isa = PBXGroup;
+			children = (
+				D8771DDD265EB6A500DC0B81 /* TIMESHEET */,
+				D8771DDB265EB66A00DC0B81 /* REIMBURSEMENT */,
+				D80E62D82642D9A7001BFA60 /* CALENDAR */,
+				D8EB770A263D8C2B00E60C59 /* SIDEMENUBAR */,
+				D85DE21E2636B7B300C766AD /* HOME */,
+				D85DE21D2636B7A800C766AD /* LOGIN */,
+				D85DE2202636B7C800C766AD /* SPLASH */,
+				D85DE2212636B7EF00C766AD /* UTILS */,
+				D85DE1FA2636941500C766AD /* Assets.xcassets */,
+				D85DE1FF2636941500C766AD /* Info.plist */,
+			);
+			path = Trilegal;
+			sourceTree = "<group>";
+		};
+		D85DE21D2636B7A800C766AD /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				D85DE2222636BD5E00C766AD /* LOGIN.storyboard */,
+				D85DE2262636BD9300C766AD /* LOGINVC.swift */,
+			);
+			path = LOGIN;
+			sourceTree = "<group>";
+		};
+		D85DE21E2636B7B300C766AD /* HOME */ = {
+			isa = PBXGroup;
+			children = (
+				D89A953A26382BDF0005A6E6 /* HOMEVC.swift */,
+				D89A953C26382C2E0005A6E6 /* HOME.storyboard */,
+			);
+			path = HOME;
+			sourceTree = "<group>";
+		};
+		D85DE2202636B7C800C766AD /* SPLASH */ = {
+			isa = PBXGroup;
+			children = (
+				D85DE1F72636940100C766AD /* Main.storyboard */,
+				D85DE2242636BD7D00C766AD /* SPLASHVC.swift */,
+			);
+			path = SPLASH;
+			sourceTree = "<group>";
+		};
+		D85DE2212636B7EF00C766AD /* UTILS */ = {
+			isa = PBXGroup;
+			children = (
+				D87693E626B0093700497CB1 /* GoogleService-Info.plist */,
+				D86CA34826733F1D0099B4E2 /* Reachability.swift */,
+				D87FF16D2660147500989168 /* whitneybook.otf */,
+				D89A953626382B370005A6E6 /* EXECUTEAPI.swift */,
+				D89A953826382B490005A6E6 /* BASEACTIVITY.swift */,
+				D85DE1F12636940100C766AD /* AppDelegate.swift */,
+				D85DE1F32636940100C766AD /* SceneDelegate.swift */,
+				D85DE1FC2636941500C766AD /* LaunchScreen.storyboard */,
+				D80E62D22642C009001BFA60 /* iOSDropDown.swift */,
+				D80E62D42642C566001BFA60 /* CardView.swift */,
+				D8A53CF22662405300570AAA /* SwiftySwitch.swift */,
+				D8BAC96C266A3828001DFC95 /* CONSTANT.swift */,
+				D866EB27267656C900E651E7 /* DBConnection.swift */,
+				D8A58729269F508100ABAAB7 /* DocumentPicker.swift */,
+				D87693E426AFE9AF00497CB1 /* BridgingHeader.m */,
+				D87693E326AFE9AF00497CB1 /* Trilegal-Bridging-Header.h */,
+			);
+			path = UTILS;
+			sourceTree = "<group>";
+		};
+		D8771DDB265EB66A00DC0B81 /* REIMBURSEMENT */ = {
+			isa = PBXGroup;
+			children = (
+				D8936EA52649068A009B6758 /* EDITREIMBURSEMENT */,
+				D8F4E2CF264534DE00A517D0 /* REVIEWREIMBURSEMENT */,
+				D8936EA7264906A9009B6758 /* MYREIMBURSEMENT */,
+				D8811BBF264A98A200955693 /* REIMBURSEMENTENTRY */,
+			);
+			path = REIMBURSEMENT;
+			sourceTree = "<group>";
+		};
+		D8771DDD265EB6A500DC0B81 /* TIMESHEET */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4E2C92645136B00A517D0 /* MYTIMESHEET */,
+				D80E62DB2642DB88001BFA60 /* EDITTIMESHEET */,
+				D80E62CF2642AEAF001BFA60 /* REVIEWTIMESHEET */,
+				D8811BBE264A988600955693 /* TIMESHEETENTRY */,
+			);
+			path = TIMESHEET;
+			sourceTree = "<group>";
+		};
+		D8811BBE264A988600955693 /* TIMESHEETENTRY */ = {
+			isa = PBXGroup;
+			children = (
+				D8811BC0264A98C400955693 /* TIMESHEETENTRY.storyboard */,
+				D8811BC2264A994900955693 /* TIMESHEETENTRYVC.swift */,
+				D899B191265C008800AA26F4 /* TimeSheetEntryAdapter.swift */,
+				D899B193265C01CD00AA26F4 /* TimeSheeetEntryCell.swift */,
+			);
+			path = TIMESHEETENTRY;
+			sourceTree = "<group>";
+		};
+		D8811BBF264A98A200955693 /* REIMBURSEMENTENTRY */ = {
+			isa = PBXGroup;
+			children = (
+				D8811BC4264A996000955693 /* REIMBURSEMENTENTRYVC.swift */,
+				D8811BC6264A997600955693 /* REIMBURSEMENTENTRY.storyboard */,
+				D8A24CD8265CBF5200BD52A2 /* ReimbursementEntryAdapter.swift */,
+				D8A24CDA265CC03B00BD52A2 /* ReimbursementEntryCell.swift */,
+				D84E6D6826A02488009F3A0F /* FileAttachmentAdapter.swift */,
+				D84E6D6A26A029E9009F3A0F /* ReimbursementFileAttachmentCell.swift */,
+				D84E6D6C26A0983B009F3A0F /* EditReimbursementFileAttachmentCell.swift */,
+				D84E6D6E26A0B3FD009F3A0F /* EditFileAttachmentAdapter.swift */,
+			);
+			path = REIMBURSEMENTENTRY;
+			sourceTree = "<group>";
+		};
+		D8936EA52649068A009B6758 /* EDITREIMBURSEMENT */ = {
+			isa = PBXGroup;
+			children = (
+				D8936EA8264906D3009B6758 /* EDITREIMBURSEMENT.storyboard */,
+				D8936EAA264906E9009B6758 /* EDITREIMBURSEMENTVC.swift */,
+				D86E821D266168CD00A62F24 /* EditReimbursementAdapter.swift */,
+				D86E821F266168E100A62F24 /* EditReimbursementCell.swift */,
+				D8BEF71626A161DE007B7436 /* ReimbursementEditFileAttachmentCell.swift */,
+				D8BEF71826A16225007B7436 /* EditReimbursementFileAttachmentAdapter.swift */,
+			);
+			path = EDITREIMBURSEMENT;
+			sourceTree = "<group>";
+		};
+		D8936EA7264906A9009B6758 /* MYREIMBURSEMENT */ = {
+			isa = PBXGroup;
+			children = (
+				D8936EAC2649071D009B6758 /* MYREIMBURSEMENT.storyboard */,
+				D8936EAE26490730009B6758 /* MYREIMBURSEMENTVC.swift */,
+				D8771DE2265EC9D900DC0B81 /* MyReimbursementCell.swift */,
+				D8771DE4265EC9F400DC0B81 /* MyReimbursementAdapter.swift */,
+			);
+			path = MYREIMBURSEMENT;
+			sourceTree = "<group>";
+		};
+		D8EB770A263D8C2B00E60C59 /* SIDEMENUBAR */ = {
+			isa = PBXGroup;
+			children = (
+				D8EB770B263D8C5200E60C59 /* SIDEMENU.storyboard */,
+				D87FF1692660106300989168 /* menuViewController.swift */,
+			);
+			path = SIDEMENUBAR;
+			sourceTree = "<group>";
+		};
+		D8F4E2C92645136B00A517D0 /* MYTIMESHEET */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4E2CA2645138D00A517D0 /* MYTIMESHEET.storyboard */,
+				D8F4E2CC264513B100A517D0 /* MYTIMESHEETVC.swift */,
+				D8771DD7265EB54200DC0B81 /* MyTimeSheetAdapter.swift */,
+				D8771DD9265EB55900DC0B81 /* MyTimesheetCell.swift */,
+			);
+			path = MYTIMESHEET;
+			sourceTree = "<group>";
+		};
+		D8F4E2CF264534DE00A517D0 /* REVIEWREIMBURSEMENT */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4E2D02645351D00A517D0 /* REVIEWREIMBURSEMENT.storyboard */,
+				D8F4E2D22645353300A517D0 /* REVIEWREIMBURSEMENTVC.swift */,
+				D8771DD3265E769100DC0B81 /* ReviewReimbursementCell.swift */,
+				D8771DD5265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift */,
+			);
+			path = REVIEWREIMBURSEMENT;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D85DE1ED2636940100C766AD /* Trilegal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D85DE2022636941500C766AD /* Build configuration list for PBXNativeTarget "Trilegal" */;
+			buildPhases = (
+				CE2554225B1F699E3F2F6435 /* [CP] Check Pods Manifest.lock */,
+				D85DE1EA2636940100C766AD /* Sources */,
+				D85DE1EB2636940100C766AD /* Frameworks */,
+				D85DE1EC2636940100C766AD /* Resources */,
+				E0DD09B1BD0D8B2BD0E53932 /* [CP] Embed Pods Frameworks */,
+				D87693F026B051A800497CB1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trilegal;
+			packageProductDependencies = (
+				D895E19F26562C39006512F6 /* IQKeyboardManagerSwift */,
+				D8D0704B2668B6DA009A572E /* Alamofire */,
+			);
+			productName = Trilegal;
+			productReference = D85DE1EE2636940100C766AD /* Trilegal TS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D85DE1E62636940100C766AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Acxiom Consulting";
+				TargetAttributes = {
+					D85DE1ED2636940100C766AD = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = D85DE1E92636940100C766AD /* Build configuration list for PBXProject "Trilegal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D85DE1E52636940100C766AD;
+			packageReferences = (
+				D895E19E26562C39006512F6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				D8D0704A2668B6DA009A572E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = D85DE1EF2636940100C766AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D85DE1ED2636940100C766AD /* Trilegal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D85DE1EC2636940100C766AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80E62D12642B1F8001BFA60 /* REVIEWTIMESHEET.storyboard in Resources */,
+				D8F4E2D12645351D00A517D0 /* REVIEWREIMBURSEMENT.storyboard in Resources */,
+				D85DE1FE2636941500C766AD /* LaunchScreen.storyboard in Resources */,
+				D8936EA9264906D3009B6758 /* EDITREIMBURSEMENT.storyboard in Resources */,
+				D8EB770C263D8C5200E60C59 /* SIDEMENU.storyboard in Resources */,
+				D8936EAD2649071D009B6758 /* MYREIMBURSEMENT.storyboard in Resources */,
+				D8F4E2CB2645138D00A517D0 /* MYTIMESHEET.storyboard in Resources */,
+				D85DE1FB2636941500C766AD /* Assets.xcassets in Resources */,
+				D8811BC1264A98C400955693 /* TIMESHEETENTRY.storyboard in Resources */,
+				D87FF16E2660147500989168 /* whitneybook.otf in Resources */,
+				D80E62DA2642D9DE001BFA60 /* CALENDAR.storyboard in Resources */,
+				D8811BC7264A997600955693 /* REIMBURSEMENTENTRY.storyboard in Resources */,
+				D87693E726B0093700497CB1 /* GoogleService-Info.plist in Resources */,
+				D85DE1F92636940100C766AD /* Main.storyboard in Resources */,
+				D80E62DD2642DBB1001BFA60 /* EDITTIMESHEET.storyboard in Resources */,
+				D85DE2232636BD5E00C766AD /* LOGIN.storyboard in Resources */,
+				D89A953D26382C2E0005A6E6 /* HOME.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE2554225B1F699E3F2F6435 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trilegal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D87693F026B051A800497CB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/FirebaseCrashlytics/run\n";
+		};
+		E0DD09B1BD0D8B2BD0E53932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trilegal/Pods-Trilegal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trilegal/Pods-Trilegal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trilegal/Pods-Trilegal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D85DE1EA2636940100C766AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8771DE5265EC9F400DC0B81 /* MyReimbursementAdapter.swift in Sources */,
+				D85DE2272636BD9300C766AD /* LOGINVC.swift in Sources */,
+				D899B192265C008800AA26F4 /* TimeSheetEntryAdapter.swift in Sources */,
+				D85DE1F22636940100C766AD /* AppDelegate.swift in Sources */,
+				D881F6C226578223001F9B27 /* CALENDARVC.swift in Sources */,
+				D8F4E2CD264513B100A517D0 /* MYTIMESHEETVC.swift in Sources */,
+				D8A5872A269F508100ABAAB7 /* DocumentPicker.swift in Sources */,
+				D8936EAB264906E9009B6758 /* EDITREIMBURSEMENTVC.swift in Sources */,
+				D86E821A2661689000A62F24 /* EditTimesheetCell.swift in Sources */,
+				D87FF16A2660106300989168 /* menuViewController.swift in Sources */,
+				D8F4E2D32645353300A517D0 /* REVIEWREIMBURSEMENTVC.swift in Sources */,
+				D8E706F926538CFE00B40F66 /* REVIEWTIMESHEETVC.swift in Sources */,
+				D8771DD6265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift in Sources */,
+				D8BEF71726A161DE007B7436 /* ReimbursementEditFileAttachmentCell.swift in Sources */,
+				D8771DDF265EB70700DC0B81 /* ReviewTimesheetAdapter.swift in Sources */,
+				D8771DD8265EB54200DC0B81 /* MyTimeSheetAdapter.swift in Sources */,
+				D8A24CDB265CC03B00BD52A2 /* ReimbursementEntryCell.swift in Sources */,
+				D84E6D6926A02488009F3A0F /* FileAttachmentAdapter.swift in Sources */,
+				D89A953B26382BDF0005A6E6 /* HOMEVC.swift in Sources */,
+				D86E821E266168CD00A62F24 /* EditReimbursementAdapter.swift in Sources */,
+				D85DE1F42636940100C766AD /* SceneDelegate.swift in Sources */,
+				D8771DD4265E769100DC0B81 /* ReviewReimbursementCell.swift in Sources */,
+				D866EB28267656C900E651E7 /* DBConnection.swift in Sources */,
+				D85DE2252636BD7D00C766AD /* SPLASHVC.swift in Sources */,
+				D8811BC5264A996000955693 /* REIMBURSEMENTENTRYVC.swift in Sources */,
+				D899B194265C01CD00AA26F4 /* TimeSheeetEntryCell.swift in Sources */,
+				D87693E526AFE9AF00497CB1 /* BridgingHeader.m in Sources */,
+				D86E8220266168E100A62F24 /* EditReimbursementCell.swift in Sources */,
+				D8BAC96D266A3828001DFC95 /* CONSTANT.swift in Sources */,
+				D89A953726382B370005A6E6 /* EXECUTEAPI.swift in Sources */,
+				D84E6D6B26A029E9009F3A0F /* ReimbursementFileAttachmentCell.swift in Sources */,
+				D870CA2D265D60850084A4EC /* DIYCalendarCell.swift in Sources */,
+				D8811BC3264A994900955693 /* TIMESHEETENTRYVC.swift in Sources */,
+				D86E821C266168B100A62F24 /* EditTimesheetAdapter.swift in Sources */,
+				D8771DE3265EC9D900DC0B81 /* MyReimbursementCell.swift in Sources */,
+				D8BEF71926A16225007B7436 /* EditReimbursementFileAttachmentAdapter.swift in Sources */,
+				D80E62D32642C009001BFA60 /* iOSDropDown.swift in Sources */,
+				D80E62D52642C566001BFA60 /* CardView.swift in Sources */,
+				D8771DE1265EB71B00DC0B81 /* ReviewTimesheetCell.swift in Sources */,
+				D8936EAF26490730009B6758 /* MYREIMBURSEMENTVC.swift in Sources */,
+				D84E6D6F26A0B3FD009F3A0F /* EditFileAttachmentAdapter.swift in Sources */,
+				D8A24CD9265CBF5200BD52A2 /* ReimbursementEntryAdapter.swift in Sources */,
+				D89A953926382B490005A6E6 /* BASEACTIVITY.swift in Sources */,
+				D8771DDA265EB55900DC0B81 /* MyTimesheetCell.swift in Sources */,
+				D8A53CF32662405300570AAA /* SwiftySwitch.swift in Sources */,
+				D84E6D6D26A0983B009F3A0F /* EditReimbursementFileAttachmentCell.swift in Sources */,
+				D80E62DF2642DBD3001BFA60 /* EDITTIMESHEETVC.swift in Sources */,
+				D86CA34926733F1E0099B4E2 /* Reachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D85DE1F72636940100C766AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D85DE1F82636940100C766AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D85DE1FC2636941500C766AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D85DE1FD2636941500C766AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D85DE2002636941500C766AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D85DE2012636941500C766AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D85DE2032636941500C766AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E47F97AEC58B3BBFD09F8682 /* Pods-Trilegal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = T3YWA5D992;
+				INFOPLIST_FILE = Trilegal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mobile.trilegal.Trilegal;
+				PRODUCT_NAME = "Trilegal TS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trilegal/UTILS/Trilegal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D85DE2042636941500C766AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C292E7C4889C6A85CF0F0E /* Pods-Trilegal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = T3YWA5D992;
+				INFOPLIST_FILE = Trilegal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mobile.trilegal.Trilegal;
+				PRODUCT_NAME = "Trilegal TS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trilegal/UTILS/Trilegal-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D85DE1E92636940100C766AD /* Build configuration list for PBXProject "Trilegal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85DE2002636941500C766AD /* Debug */,
+				D85DE2012636941500C766AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D85DE2022636941500C766AD /* Build configuration list for PBXNativeTarget "Trilegal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D85DE2032636941500C766AD /* Debug */,
+				D85DE2042636941500C766AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D895E19E26562C39006512F6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+		D8D0704A2668B6DA009A572E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D895E19F26562C39006512F6 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D895E19E26562C39006512F6 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		D8D0704B2668B6DA009A572E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8D0704A2668B6DA009A572E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D85DE1E62636940100C766AD /* Project object */;
+}
